@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "CapacitandoAUnAmigo"
+  "defaultProject": "CapacitandoAUnAmigo",
+  "cli": {
+    "analytics": false
+  }
 }
