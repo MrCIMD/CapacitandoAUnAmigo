@@ -1,0 +1,24 @@
+<div class="flex">
+  <div class="flex-shrink-0">
+    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+      <img [src]="agent.photo" alt="">
+    </div>
+  </div>
+  <div class="ml-4">
+    <dt class="text-lg leading-6 font-medium text-gray-900">
+      <b>Nombre:</b> {{ agent.name }}
+    </dt>
+    <dd class="mt-2 text-base text-gray-500 text-justify">
+      <b>Edad:</b> {{ agent.age ? agent.age : 'Desconocido' }}
+    </dd>
+    <dd class="mt-2 text-base text-gray-500 text-justify">
+      <b>Descripción:</b> {{ agent.description }}
+    </dd>
+    <dd class="mt-2 text-base text-gray-500 text-justify">
+      <b>Nacionalidad:</b> {{ agent.nationality }}
+    </dd>
+    <dd class="mt-2 text-base text-gray-500 text-justify">
+      <b>Clase / Rol:</b> {{ agent.class }}
+    </dd>
+  </div>
+</div>

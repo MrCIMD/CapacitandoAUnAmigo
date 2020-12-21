@@ -7,7 +7,6 @@ import {IAgent} from '../../types/agent.interface';
   styles: [``]
 })
 export class CharactersListComponent {
-  public openCreateModal: boolean;
   public list: IAgent[] = [
     {
       name: 'Breach',
@@ -17,10 +16,16 @@ export class CharactersListComponent {
       nationality: 'Suecia',
       class: 'Iniciador'
     },
+    {
+      name: 'Omen',
+      photo: 'https://tiermaker.com/images/chart/chart/all-valorant-agents-386823/omen-avatarjpg.png',
+      nationality: 'Desconocida',
+      class: 'Controlador',
+      description: 'Omen, cazador de las sombras, rondador solitario del infinito. personaje bastante ofensivo con el que hay que tener mucho cuidado si se encuentra en el campo de batalla, cuida siempre tus espaldas.',
+    }
   ];
 
   constructor() {
-    this.openCreateModal = false;
   }
 
 }
