@@ -4,7 +4,7 @@
       <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         List de agentes
       </p>
-      <app-create-agent></app-create-agent>
+      <app-create-agent (invite)="addNewAgent($event)"></app-create-agent>
     </div>
 
     <div class="mt-10">

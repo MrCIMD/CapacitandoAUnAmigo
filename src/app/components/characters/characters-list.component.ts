@@ -28,4 +28,7 @@ export class CharactersListComponent {
   constructor() {
   }
 
+  public addNewAgent(newAgent: Partial<IAgent>): void {
+    this.list.push(newAgent as IAgent);
+  }
 }

@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {IAgent} from '../../types/agent.interface';
 
 @Component({
   selector: 'app-create-agent',
@@ -9,6 +10,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class CreateAgentComponent {
   public openCreateModal: boolean;
   public form!: FormGroup;
+  @Output() invite: EventEmitter<IAgent> = new EventEmitter<IAgent>();
 
   constructor(private readonly fb: FormBuilder) {
     this.openCreateModal = false;
@@ -16,13 +18,22 @@ export class CreateAgentComponent {
   }
 
   private buildForm(): void {
+    const validation = [Validators.required, Validators.minLength(3)];
     this.form = this.fb.group({
-      name:         [],
-      photo:        [],
-      age:          [],
-      class:        [],
-      nationality:  [],
-      description:  []
+      name:         ['', validation],
+      photo:        ['', validation],
+      age:          [''],
+      class:        ['', validation],
+      nationality:  [''],
+      description:  ['', validation]
     });
+  }
+
+  public save(): void {
+    if (this.form.valid) {
+      const newAgent: IAgent = this.form.getRawValue();
+      this.invite.emit(newAgent);
+      this.openCreateModal = !this.openCreateModal;
+    }
   }
 }
