@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {IAgent} from '../../types/agent.interface';
+import {IAgent} from '../../../types/agent.interface';
 
 @Component({
   selector: 'app-create-agent',

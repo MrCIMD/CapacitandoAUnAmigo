@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IAgent} from '../../types/agent.interface';
+import {IAgent} from '../../../types/agent.interface';
 
 @Component({
   selector: 'app-characters-list',
