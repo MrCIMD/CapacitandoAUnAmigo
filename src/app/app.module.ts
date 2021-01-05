@@ -9,6 +9,7 @@ import {CardAgentComponent} from './components/agents/card-agent/card-agent.comp
 import {WeaponsListComponent} from './components/weapons/weapons/weapons-list.component';
 import {CreateWeaponComponent} from './components/weapons/create-weapon/create-weapon.component';
 import {CardWeaponComponent} from './components/weapons/card-weapon/card-agent.component';
+import {WeaponService} from './services/weapon/weapon.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,9 @@ import {CardWeaponComponent} from './components/weapons/card-weapon/card-agent.c
   imports: [
     BrowserModule,
     ReactiveFormsModule
+  ],
+  providers: [
+    WeaponService
   ],
   bootstrap: [AppComponent]
 })
