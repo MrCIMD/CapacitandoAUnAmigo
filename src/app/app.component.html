@@ -8,15 +8,11 @@
           <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
         </a>
       </div>
-      <nav class="hidden md:flex space-x-10">
-        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-          Pricing
-        </a>
-        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-          Docs
-        </a>
+      <nav class="md:flex space-x-10">
+        <a routerLink="/agents" class="text-base font-medium text-gray-500 hover:text-gray-900">Agentes</a>
+        <a routerLink="/weapons" class="text-base font-medium text-gray-500 hover:text-gray-900">Armas</a>
       </nav>
-      <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+      <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
         <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
           Sign in
         </a>
@@ -27,6 +23,5 @@
     </div>
   </div>
 </div>
-<!--<app-characters-list></app-characters-list>-->
 
-<app-weapons-list></app-weapons-list>
+<router-outlet></router-outlet>
